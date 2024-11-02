@@ -7,6 +7,7 @@
         }*/
 .video-container {
     display: inline-block;
+    margin-top: 0.5em;
     padding-left: 1%;
     padding-top: 1%;
 }
@@ -16,6 +17,7 @@
     padding-left: 15%;
 }
 
+/* Глобальные стили для хедеров на всём сайте */
 header {
     color: black;
     padding-left: 1%;
@@ -54,18 +56,33 @@ body {
     padding-left: 11%;
 }
 
-header, footer, aside, body, .navbar, .video-container {
+header,footer,aside,body,.navbar,.video-container {
     font-family: "Helvetica 65 Medium", sans-serif;
 }
-    /* Стили панели навигации */
-    .navbar p {
-        color: darkgray;
+/* Стили панели навигации */
+.navbar p {
+        color: slategray;
         padding-left: 15%;
-    }
-        /* Стили панели навигации при наведении мышью */
-        .navbar p:hover {
-            color: aliceblue;
-        }
-header, footer, body, .video-container {
-    background-color: pink;
 }
+/* Стили панели навигации при наведении мышью */
+.navbar p:hover {
+            color: darkslategray;
+
+}
+header, footer, body, .video-container {
+    background-color: lightcyan;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: 2px solid darkgrey;
+    border-radius: 2px;
+    outline: none;
+}
+
+    input:focus {
+        border: 2px solid dimgrey;
+    }
