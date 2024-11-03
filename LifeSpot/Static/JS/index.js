@@ -11,3 +11,6 @@ else {
     alert("Наши трансляции не предназначены для лиц моложе 18 лет. Вы будете перенаправлены");
     window.location.href = "http://www.google.com"
 }
+
+let userName = prompt("Пожалуйста, введите имя");
+alert(`Приветсвуем, ${userName}. В имени ${userName.length} символов`)
