@@ -5,8 +5,23 @@
     <title>LifeSpot</title>
     <!--Подключение стилей по отностиельному пути из внешнего файла-->
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
-    <!-- Подключение Javascript внутри страницы-->
-    <script defertype="text/javascript" src ="../Static/JS/index.js"></script>
+    <!-- Подключение Javascript внутри страницы, внешний скрипт с функциями-->
+    <script type="text/javascript" src ="../Static/JS/index.js"></script>
+    <!--внутренний скрипт с функциями-->
+    <script>
+        checkAge();
+        handleSession();
+        sessionLog();
+        //создадим и бработаем сессию
+        //let session = handleSession();
+
+        //логируем в консоль
+        // sessionLog(session)
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+    </script>
+
 </head>
 
 <header id="header-index">
@@ -14,37 +29,18 @@
     <h1>LifeSpot — прямые трансляции с улиц</h1>
     <!--Параграф-->
     <p>Покажем, что происходит прямо сейчас</p>
-
-    <input type="text" oninput="filterContent()" placeholder="Search"/>
-           <!--/*Получим все элементы input с нашей страницы */
-           let elements = document.getElementsByClassName('video-container');
-           for (let i = 0; i = elements.length; i++)
-    {
-    //Получим все, что внутри контейнера
-    let childElements = elements[i];
-    // Получим элемент, содержащий описание видео
-    // Он у нас единственный с тегом h3, снова воспользуемся поиском по тегу,
-    let videoDescription = childElements.getElementsByTagName('h3')[0];
-    // Выведем его текст на консоль
-               console.log(videoDescription.innerText);
-    }
-    ////Получим первый элемент DOM в коллекции
-    //let element = elements[0];
-    ////Получим строковое значение
-    //let elementText = element.value;
-    ////Выведем во всплывающем окне
-    //alert(elementText)
-    " size=50%>-->
+    <input type="text" oninput="filterContent()" size="50%">   
 </header>
 
 <!--Сайд-бар страницы-->
-<aside id="sidebar">
+<!--<aside id="sidebar">
     <div class="navbar">
         <a href="/"><p>Все трансляции</p></a>
         <a href="/"><p>О проекте</p></a>
     </div>
-</aside>
+</aside>-->
 
+<!--SIDEBAR-->
 <body>
     <div class="bordered">
 
@@ -67,9 +63,11 @@
     </div>
 </body>
 
-    <footer>
+    <!--<footer>
         <p>LifeSpot - все права защищены</p>
         <p>Связаться с нами: contact@lifespot.ru</p>
-    </footer>
+    </footer>-->
+
+<!--FOOTER-->
 
 </html>
